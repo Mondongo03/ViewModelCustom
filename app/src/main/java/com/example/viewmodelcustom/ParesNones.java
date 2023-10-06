@@ -29,14 +29,14 @@ public class ParesNones extends Fragment {
                 int numero2 = (int) (Math.random() * 99) + 1;
                 String nombre = (binding.nombre.getText().toString());
                 String pr = (binding.pr.getText().toString());
-                Jugar.Juego juego = new Jugar.Juego(numero, numero2);
+                Juego juego = new Jugar.Juego(numero, numero2);
 
                 new AsyncTask<Jugar.Juego, Void, Integer>(){
 
                     @Override
                     protected Integer doInBackground(Jugar.Juego ... juegos) {
                         Jugar jugarr = new Jugar();
-                        return jugarr.jugar(juegos[0]);
+                        return jugarr.jugar();
                     }
 
                     @Override
